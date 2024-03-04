@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image, Text } from "react-native";
+import { View, StyleSheet, Image, Text, Dimensions } from "react-native";
 import SectionTitle from "../shared/SectionTitle";
 import TextDescription from "../shared/TextDescription";
 
@@ -6,7 +6,7 @@ const LeadSection = () => {
     return(
         <View style={styles.section}>
             <SectionTitle text='Путешествия по России' isTitle={true} />
-            <TextDescription text='Настоящая страна не в выпусках новостей, а здесь.' />
+            <TextDescription text='Настоящая страна не в выпусках новостей, а здесь.' styleSheet={styles.descr} />
             <Image style={styles.image} source={require('./images/imageLead.png')} />
             <Text style={styles.text}>
                 ваша полка — верхняя
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     image: {
-        width: '100%',
+        width: Dimensions.get('window').width,
         marginTop: 40
     },
     text: {
@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         textTransform: 'uppercase',
         marginTop: 8
+    },
+    descr: {
+        marginTop: 16,
+        lineHeight: 20
     }
 });
 

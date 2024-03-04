@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, ScrollView, Platform, NativeModules } from 'react-native';
+import { StyleSheet, ScrollView, Platform, NativeModules, FlatList } from 'react-native';
 import Header from './widgets/Header';
 import LeadSection from './widgets/LeadSection';
+import DescriptionSection from './widgets/DescriptionSection';
 
 const { StatusBarManager } = NativeModules;
 
@@ -10,6 +11,7 @@ export default function App() {
     <ScrollView style={styles.container}>
       <Header />
       <LeadSection />
+      <DescriptionSection />
       <StatusBar barStyle='light-content' backgroundColor="#fff" />
     </ScrollView>
   );
@@ -18,8 +20,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2A2C2F',
-    height: '100%',
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? StatusBarManager.HEIGHT : 0,
+    height: '100%',
+    marginTop: StatusBarManager.HEIGHT
   }
 });
