@@ -1,9 +1,9 @@
 import { Text, StyleSheet, View } from "react-native";
 
-const LineText = ({ text, isLine = true }) => {
+const LineText = ({ text, isLine = true, styleSheet }) => {
     return(
         <View>
-            <Text style={isLine? [styles.text, styles.line] : styles.text}>
+            <Text style={isLine? [styles.text, styles.line, styleSheet] : [styles.text, styleSheet]}>
                 {text}
             </Text>
         </View>

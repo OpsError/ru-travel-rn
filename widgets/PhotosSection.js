@@ -20,6 +20,9 @@ const PhotosSection = () => {
         <View style={styles.section}>
             {
                 photos.map((element) => 
+                // понятное дело, что key на деле будет другой,
+                // я просто не хотела заморачиваться с тем, чтобы делать
+                // массив объектов
                    <Image style={styles.image} source={element} key={element} /> 
                 )
             }

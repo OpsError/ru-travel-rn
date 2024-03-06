@@ -4,6 +4,7 @@ import Header from './widgets/Header';
 import LeadSection from './widgets/LeadSection';
 import DescriptionSection from './widgets/DescriptionSection';
 import PhotosSection from './widgets/PhotosSection';
+import PlacesSection from './widgets/PlacesSection';
 
 const { StatusBarManager } = NativeModules;
 
@@ -14,6 +15,7 @@ export default function App() {
       <LeadSection />
       <DescriptionSection />
       <PhotosSection />
+      <PlacesSection />
       <StatusBar barStyle='light-content' backgroundColor="#fff" />
     </ScrollView>
   );
