@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, Platform, NativeModules, FlatList } from 'react
 import Header from './widgets/Header';
 import LeadSection from './widgets/LeadSection';
 import DescriptionSection from './widgets/DescriptionSection';
+import PhotosSection from './widgets/PhotosSection';
 
 const { StatusBarManager } = NativeModules;
 
@@ -12,6 +13,7 @@ export default function App() {
       <Header />
       <LeadSection />
       <DescriptionSection />
+      <PhotosSection />
       <StatusBar barStyle='light-content' backgroundColor="#fff" />
     </ScrollView>
   );
